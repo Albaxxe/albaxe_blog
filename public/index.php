@@ -26,7 +26,11 @@ switch ($page) {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $message = $authController->login($_POST['usernameOrEmail'], $_POST['password']);
         }
-        require_once '../app/views/auth/login.php';
+        $viewPath = __DIR__ . '/../app/views/auth/login.php';
+        if (!file_exists($viewPath)) {
+        die("Erreur : La vue demandée n'existe pas ($viewPath)");
+        }    
+        require_once $viewPath;
         break;
 
     case 'register':
