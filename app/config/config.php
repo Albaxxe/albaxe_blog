@@ -1,5 +1,7 @@
 <?php
 // File: app/config/config.php
+define('BASE_PATH', __DIR__ . '/../');
+define('BASE_URL', 'http://localhost/albaxe_blog/');
 
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'albaxe_blog');
@@ -12,3 +14,4 @@ try {
 } catch (PDOException $e) {
     die("Erreur de connexion : " . $e->getMessage());
 }
+

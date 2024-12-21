@@ -1,7 +1,7 @@
 <?php
 // File: app/controllers/AuthController.php
 
-require_once 'app/models/User.php';
+require_once __DIR__ . '/../models/User.php';
 
 class AuthController {
     private $userModel;
