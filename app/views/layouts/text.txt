@@ -1,0 +1,9 @@
+C:\xampp\htdocs\albaxe_blog
+
+cd C:\xampp\htdocs\albaxe_blog
+git init
+git add .
+git commit -m "Premier commit"
+git branch -M main
+git remote add origin https://github.com/votre-utilisateur/albaxe_blog.git
+git push -u origin main
