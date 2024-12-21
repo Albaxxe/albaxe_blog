@@ -1,7 +1,7 @@
 <?php
 // File: app/config/config.php
 define('BASE_PATH', __DIR__ . '/../');
-define('BASE_URL', 'http://localhost/albaxe_blog/');
+define('BASE_URL', 'http://localhost/albaxe_blog/public');
 
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'albaxe_blog');
