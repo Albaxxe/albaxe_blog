@@ -5,5 +5,7 @@ git init
 git add .
 git commit -m "Premier commit"
 git branch -M main
-git remote add origin https://github.com/votre-utilisateur/albaxe_blog.git
+git remote add origin https://github.com/Albaxxe/albaxe_blog
 git push -u origin main
+
+
