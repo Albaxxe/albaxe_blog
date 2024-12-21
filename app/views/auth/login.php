@@ -1,11 +1,11 @@
-<form method="post" action="/auth/login">
-    <div class="form-group">
+<div class="form-container">
+    <form action="<?= BASE_URL ?>/auth/login" method="POST">
         <label for="email">Email</label>
-        <input type="email" class="form-control" id="email" name="email" placeholder="Entrez votre email">
-    </div>
-    <div class="form-group">
+        <input type="email" name="email" id="email" placeholder="Entrez votre email" required>
+        
         <label for="password">Mot de passe</label>
-        <input type="password" class="form-control" id="password" name="password" placeholder="Entrez votre mot de passe">
-    </div>
-    <button type="submit" class="btn btn-primary">Se connecter</button>
-</form>
+        <input type="password" name="password" id="password" placeholder="Entrez votre mot de passe" required>
+        
+        <button type="submit">Se connecter</button>
+    </form>
+</div>
