@@ -1,15 +1,20 @@
-<?php $title = "Connexion"; ?>
-<?php include __DIR__ . '/layouts/header.php'; ?>
-
-<div class="main-container">
+<?php
+// File: app/views/auth/login.php
+require_once '../app/views/layouts/header.php';
+?>
+<div class="form-container">
     <h2>Connexion</h2>
-    <form action="" method="POST">
-        <input type="email" name="email" placeholder="Adresse Email" required>
-        <input type="password" name="password" placeholder="Mot de passe" required>
-        <button type="submit">Se connecter</button>
+    <form action="<?= BASE_URL ?>/public/login" method="POST">
+        <label for="usernameOrEmail">Nom d'utilisateur ou Email</label>
+        <input type="text" name="usernameOrEmail" id="usernameOrEmail" required>
+        
+        <label for="password">Mot de passe</label>
+        <input type="password" name="password" id="password" required>
+        
+        <button type="submit">Connexion</button>
+        <p><a href="<?= BASE_URL ?>/public/register">Créer un compte</a></p>
     </form>
-    <p>Pas encore inscrit ? <a href="<?= BASE_URL ?>/register">Créer un compte</a></p>
 </div>
-
-
-<?php include __DIR__ . '/layouts/footer.php'; ?>
+<?php
+require_once '../app/views/layouts/footer.php';
+?>
