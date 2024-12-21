@@ -4,28 +4,44 @@
 
 ---
 
-## Fonctionnalités actuelles
+## Fonctionnalités disponibles
 
-### Backend
-- [✅] Système de gestion des comptes utilisateur (**inscription, connexion, déconnexion**).
-- [✅] Protection des mots de passe via **hashage sécurisé**.
-z- [✅] Protection contre les attaques **XSS**.
+### Gestion des utilisateurs
+- [✅] Inscription
+- [✅] Connexion
+- [✅] Déconnexion
+- [🔄] Validation des entrées utilisateur (protection XSS)
+- [❌] Récupération de mot de passe
 
-### Frontend (non finalisé)
-- [❌] Présentation d'un **CV dynamique** (problèmes d'alignement et de design).
-- [❌] Affichage des **projets** (structure fonctionnelle mais design incomplet).
-- [❌] Design responsive basé sur **Bootstrap** (non aligné et non optimisé).
+### Gestion des projets
+- [✅] Liste des projets
+- [✅] Affichage détaillé des projets
+- [🔄] Création/édition de projet (administrateur uniquement)
+- [❌] Ajout de posts d'avancement
+
+### Gestion des commentaires
+- [✅] Affichage des commentaires
+- [❌] Ajout de commentaires
+- [❌] Modération des commentaires
+
+### Front-end (design et expérience utilisateur)
+- [🔄] Design responsive avec Bootstrap (problèmes d'alignement)
+- [❌] Notifications en temps réel
+
+### Base de données
+- [✅] Structure des tables pour utilisateurs, projets, commentaires
+- [🔄] Optimisation des relations entre tables
+- [❌] Requêtes SQL optimisées
 
 ---
 
 ## Fonctionnalités futures (roadmap)
-- [❌] Notifications en temps réel (ex. : nouveaux commentaires, nouvelles publications).
-- [❌] Intégration d'une API REST pour les développeurs.
-- [❌] Outil d'import/export des données (JSON, CSV).
-- [❌] Optimisation pour le référencement SEO.
-- [❌] Mode hors ligne avec **Progressive Web App** (PWA).
 
----
+- [❌] Intégration d'une API REST pour les développeurs
+- [❌] Ajout de notifications en temps réel
+- [❌] Outil d'import/export des données (JSON, CSV)
+- [❌] Hébergement du site avec une URL accessible en ligne
+- [❌] Mode hors ligne avec Progressive Web App (PWA)
 
 ## Installation
 
