@@ -5,11 +5,17 @@ session_start();
 
 // Autoloading des classes
 spl_autoload_register(function ($class) {
-    $file = '../app/controllers/' . $class . '.php';
-    if (file_exists($file)) {
-        require_once $file;
-    } else {
-        die("Le fichier pour la classe $class n'existe pas : $file");
+    $paths = [
+        __DIR__ . '/../app/controllers/',
+        __DIR__ . '/../app/models/',
+    ];
+
+    foreach ($paths as $path) {
+        $file = $path . $class . '.php';
+        if (file_exists($file)) {
+            require_once $file;
+            return;
+        }
     }
 });
 
