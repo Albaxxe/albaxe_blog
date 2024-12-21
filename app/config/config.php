@@ -1,20 +1,14 @@
 <?php
-// Configuration globale du projet
+// File: app/config/config.php
 
-// Configuration de la base de données
-const DB_HOST = 'localhost';
-const DB_NAME = 'albaxe_blog';
-const DB_USER = 'root';
-const DB_PASSWORD = '';
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'albaxe_blog');
+define('DB_USER', 'root');
+define('DB_PASSWORD', '');
 
-// URL de base
-const BASE_URL = 'http://localhost/albaxe_blog';
-
-// Sel de sécurité pour le hachage
-const SECURITY_SALT = 'random_salt_for_extra_security';
-
-// Mode debug
-const DEBUG_MODE = true;
-
-// Fuseau horaire
-date_default_timezone_set('UTC');
+try {
+    $db = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME, DB_USER, DB_PASSWORD);
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Erreur de connexion : " . $e->getMessage());
+}

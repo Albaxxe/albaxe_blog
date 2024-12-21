@@ -28,33 +28,22 @@ if (isset($_SESSION['user_id'])) {
     <script defer src="/albaxe_blog/public/js/app.js"></script>
 </head>
 <body>
-<header>
-    <div class="header-container">
-        <!-- Menu déroulant à gauche -->
-        <div class="menu-left">
-            <button id="menu-toggle">Menu</button>
-            <div class="dropdown">
-                <a href="/albaxe_blog/public/cv">CV</a>
-                <a href="/albaxe_blog/public/projects">Projets</a>
-            </div>
-        </div>
-
-        <!-- Titre centré -->
-        <h1><a href="/albaxe_blog/public">Albaxe Blog</a></h1>
-
-        <!-- Connexion et Inscription -->
-        <nav>
-            <ul>
-                <?php if (isset($_SESSION['username'])): ?>
-                    <li>Bienvenue, <?= $_SESSION['username'] ?>!</li>
-                    <li><a href="/albaxe_blog/public/logout">Déconnexion</a></li>
-                <?php else: ?>
-                    <li><a href="/albaxe_blog/public/login">Connexion</a></li>
-                    <li><a href="/albaxe_blog/public/register">Inscription</a></li>
-                <?php endif; ?>
+<header class="header">
+    <div class="container">
+        <h1 class="site-title">
+            <a href="<?= BASE_URL; ?>">Albaxe Blog</a>
+        </h1>
+        <nav class="navigation">
+            <button class="menu-toggle" aria-label="Ouvrir le menu">Menu</button>
+            <ul class="nav-links">
+                <li><a href="<?= BASE_URL; ?>/cv">CV</a></li>
+                <li><a href="<?= BASE_URL; ?>/projects">Projets</a></li>
+                <li><a href="<?= BASE_URL; ?>/login">Connexion</a></li>
+                <li><a href="<?= BASE_URL; ?>/register">Inscription</a></li>
             </ul>
         </nav>
     </div>
 </header>
+
 
 <main>
